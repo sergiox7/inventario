@@ -3,7 +3,7 @@
 
 	<div class="page-header" id="banner">
 
-		<h1>Soy un punto de venta</h1>
+		<h1>Gestión puntos de venta</h1>
 	</div>
 	
 
@@ -83,14 +83,14 @@
 
 	</div>
 
-	<div class="d-flex justify-content-around m-2">
+<!-- 	<div class="d-flex justify-content-around m-2">
 		<a href="http://localhost/inventario/">Login</a>
 		<a href="http://localhost/inventario/controlador/puntosVenta">Puntos de venta</a>
 		<a href="http://localhost/inventario/controlador/insumos">Insumos</a>
 		<a href="http://localhost/inventario/controlador/recetas">Recetas</a>
 		<a href="http://localhost/inventario/controlador/productos">productos</a>
 		<a href="http://localhost/inventario/controlador/reportes">Reportes</a>
-	</div>
+	</div> -->
 	
 
 </div>
