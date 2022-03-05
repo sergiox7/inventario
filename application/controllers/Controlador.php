@@ -37,7 +37,9 @@ class Controlador extends CI_Controller{
 
 	}
 	public function reportes(){
-		$this->load->view( "reportes" );
+		$this->load->view( "public/componentes/header_f" );
+		$this->load->view( "public/private/reportes" );
+		$this->load->view( "public/componentes/footer_f");
 	}
 }
 ?>
