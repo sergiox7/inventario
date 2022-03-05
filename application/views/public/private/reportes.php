@@ -3,7 +3,7 @@
 
 	<div class="page-header" id="banner">
 
-		<h1>Soy una receta</h1>
+		<h1>Soy un reporte</h1>
 	</div>
 	
 

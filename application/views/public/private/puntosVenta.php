@@ -52,11 +52,23 @@
 
 				  	for ($i=0; $i <3 ; $i++) { ?>
 
-						<div class="card col-6 p-2">
+						<div class="card col-md-6 col-sm-12 p-2">
+							<div class="card-header text-white bg-secondary">INVENTARIO PUNTO DE VENTA <?php echo($i+1) ?></div>
 						  <div class="card-body">
-						    <h5 class="card-title">Card title</h5>
-						    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						    <a href="#" class="btn btn-primary">Button</a>
+						    
+						    <div class="d-flex flex-row justify-content-between">
+						    	<div>
+						    		<h5 class="card-title"><?php echo($datos[$i]) ?></h5>
+						    	</div>
+						    	<div class="d-flex flex-column col-6">
+						    		<div class="d-flex justify-content-end">
+									    <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa-solid fa-pen-to-square"></i></button>
+										<button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa-solid fa-trash"></i></button>
+						    		</div>
+						    		<a href="#" class="btn btn-outline-primary m-1">Opciones</a>
+						    	</div>
+						    </div>
+						    
 						  </div>
 						</div>
 
