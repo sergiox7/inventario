@@ -3,7 +3,7 @@
 
 	<div class="page-header" id="banner">
 
-		<h1>Gestión productos</h1>
+		<h1>Gestión proveedores</h1>
 	</div>
 	
 
@@ -27,13 +27,13 @@
 					</div>
 				</div>
 				<div class="col">
-					<!-- <button class="form-control btn btn-primary btn-sm" type="button">CREAR PRODUCTO <i class="fa-solid fa-plus"></i></button> -->
+					<!-- <button class="form-control btn btn-primary btn-sm" type="button">CREAR proveedor <i class="fa-solid fa-plus"></i></button> -->
 				</div>
 				<div class="col">
-					<button class="form-control btn btn-primary btn-sm" type="button">HISTORIAL <i class="fa-solid fa-chart-simple"></i></button>
+					<!-- <button class="form-control btn btn-primary btn-sm" type="button">HISTORIAL <i class="fa-solid fa-chart-simple"></i></button> -->
 				</div>
 				<div class="col">
-					<a href="<?=base_url('/controlador/detalleproducto')?>" class="form-control btn btn-primary btn-sm" type="button">AGREGAR <i class="fa-solid fa-chart-simple"></i></a>
+					<a href="<?=base_url('/controlador/detalleproveedor')?>" class="form-control btn btn-primary btn-sm" type="button">AGREGAR <i class="fa-solid fa-chart-simple"></i></a>
 					<div class="row mt-2"></div>
 					<!-- <button class="form-control btn btn-outline-primary btn-sm" type="button">EXPORTAR A EXCEL <i class="fa-solid fa-file-export"></i></button> -->
 				</div>
@@ -49,9 +49,6 @@
 				    <tr>
 				      <th scope="col">#</th>
 				      <th scope="col">NOMBRE</th>
-				      <th scope="col">UNIDAD DE MEDIDA</th>
-				      <th scope="col">PROVEEDOR</th>
-				      <th scope="col">ESTADO</th>
 				      <th scope="col">DETALLES</th>
 				      <th scope="col">ACCIONES</th>
 				    </tr>
@@ -59,26 +56,18 @@
 				  <tbody>
 				  	<?php 
 
-				  	$datos = array('Coca-cola','Sabritas','Pastelito Marinela Chocoroles 4 pzas.', 'Pastelito Marinela Chocoroles 4 pzas.', 'Pastelito Marinela Gansito 50 g.', 'Chocolate Carlos V');
- 				  	$marcas = array('Coca-Cola Company','PepsiCo','Grupo Bimbo');
+ 				  	$marcas = array('Coca-Cola Company','PepsiCo','Grupo Bimbo','Sigma alimentos','Sukarne','Alpura');
 
 				  	for ($i=0; $i <6 ; $i++) { ?>
 
 				    <tr>
 				      <th scope="row"><?php echo($i+1) ?></th>
-				      <td><?php echo($datos[$i]) ?></td>
-				      <td>Unidades</td>
-				      <td><?php $temp = array_rand($marcas); echo($marcas[$temp]) ?></td>
-				      <td>Activo</td>
-				      <td><a href="<?=base_url('/controlador/detalleproducto')?>">Ver mas </a></td>
+				      <td><?php echo($marcas[$i]) ?></td>
+				      <td><a href="<?=base_url('/controlador/detalleproveedor')?>">Ver mas </a></td>
 				      <td>
 				      	
-						<a href="<?=base_url('/controlador/detalleproducto')?>" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+						<a href="<?=base_url('/controlador/detalleproveedor')?>" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
 						<button type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-trash"></i></button>
-						<button type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-dollar-sign"></i></button>
-						<button type="button" class="btn btn-outline-dark btn-sm">Merma</button>
-						<button type="button" class="btn btn-outline-dark btn-sm">Historial Merma</button>
-
 				      </td>
 				    </tr> 
 				  	<?php
@@ -100,7 +89,7 @@
 		<a href="http://localhost/inventario/controlador/puntosVenta">Puntos de venta</a>
 		<a href="http://localhost/inventario/controlador/insumos">Insumos</a>
 		<a href="http://localhost/inventario/controlador/recetas">Recetas</a>
-		<a href="http://localhost/inventario/controlador/productos">productos</a>
+		<a href="http://localhost/inventario/controlador/proveedors">proveedors</a>
 		<a href="http://localhost/inventario/controlador/reportes">Reportes</a>
 	</div> -->
 	

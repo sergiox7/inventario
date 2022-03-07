@@ -33,7 +33,7 @@
 					
 				</div>
 				<div class="col">
-					<button class="form-control btn btn-primary btn-sm" type="button">AGREGAR <i class="fa-solid fa-chart-simple"></i></button>
+					<a href="<?=base_url('/controlador/detallereceta')?>" class="form-control btn btn-primary btn-sm" type="button">AGREGAR <i class="fa-solid fa-chart-simple"></i></a>
 					<div class="row mt-2"></div>
 					<!-- <button class="form-control btn btn-outline-primary btn-sm" type="button">EXPORTAR A EXCEL <i class="fa-solid fa-file-export"></i></button> -->
 				</div>
@@ -69,7 +69,7 @@
 				      <td><?php echo($datos[$i]) ?></td>
 				      <td><?php echo(random_int(6, 18)) ?></td>
 				      <td><?php echo(random_int(100, 699).' grs') ?></td>
-				      <td><a href="#">Ver mas </a></td>
+				      <td><a href="<?=base_url('/controlador/detallereceta')?>">Ver mas </a></td>
 				      <td><?php echo(random_int(20, 45).' u') ?></td>
 				      <td>
 				      	

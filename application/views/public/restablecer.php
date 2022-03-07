@@ -3,33 +3,31 @@
 
 	<div class="page-header" id="banner">
 
-		<!-- <h1>Iniciar sesión</h1> -->
+		<!-- <h1>Restablecer contraseña</h1> -->
 
 		<div class="d-flex justify-content-center p-2">
 			<div class="card" style="width: 28rem;">
 			  <div class="card-body">
 			  	<div class="text-center mt-2 mb-2">
-  			  		<i class="fa-solid fa-user fa-10x"></i>			  		
+  			  		<i class="fa-solid fa-person fa-10x"></i>			  		
 			  	</div>
 			  	
-			    <h3 class="card-title text-center">Ingresar</h3>
-			    <p>Iniciar sesión</p>
+			    <h3 class="card-title text-center">Ingresa tu correo</h3>
+			    <p>Restablecer contraseña</p>
 			    <form>
 				  <div class="form-group m-2">
 				    <label for="exampleInputEmail1">Usuario</label>
 				    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-				  </div>
-				  <div class="form-group m-2">
-				    <label for="exampleInputPassword1">Contraseña</label>
-				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-				  </div>
-				  <div class="form-check m-2">
+				  </div> 
+				  <div class="form-check m-2 text-center">
+				  	<a href="<?=base_url('/controlador')?>" class="text-muted">Iniciar sesión</a>
 				  </div>
 				  <div class="row">
 				    <div class="col-sm">
+
 				    </div>
 				    <div class="col-sm">
-				     <button type="submit" class="btn btn-primary">ACCEDER</button>
+				     <button type="submit" class="btn btn-primary form-control">ACCEDER</button>
 				    </div>
 				    <div class="col-sm">
 				    </div>

@@ -30,7 +30,7 @@
     <!-- navbar -->
 
 <div class="bs-component">
-              <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+              <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">TAQ</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,23 +47,9 @@
                       <li class="nav-item">
                         <a class="nav-link" href="<?=base_url('/controlador')?>">Inicio</a>
                       </li>
+                      
                       <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url('/controlador/puntosVenta')?>">Inventarios</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url('/controlador/insumos')?>">Insumos</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url('/controlador/proveedores')?>">Proveedores</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url('/controlador/recetas')?>">Recetas</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url('/controlador/productos')?>">Productos</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url('/controlador/reportes')?>">Reportes</a>
+                        <a class="nav-link" href="<?=base_url('/controlador/restablecer')?>">Restablecer contraseña</a>
                       </li>
                     </ul>
 

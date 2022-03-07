@@ -33,7 +33,7 @@
 					<button class="form-control btn btn-primary btn-sm" type="button">HISTORIAL <i class="fa-solid fa-chart-simple"></i></button>
 				</div>
 				<div class="col">
-					<button class="form-control btn btn-primary btn-sm" type="button">AGREGAR <i class="fa-solid fa-chart-simple"></i></button>
+					<a href="<?=base_url('/controlador/detalleinsumo')?>" class="form-control btn btn-primary btn-sm" type="button">AGREGAR <i class="fa-solid fa-chart-simple"></i></a>
 					<div class="row mt-2"></div>
 					<!-- <button class="form-control btn btn-outline-primary btn-sm" type="button">EXPORTAR A EXCEL <i class="fa-solid fa-file-export"></i></button> -->
 				</div>
@@ -71,11 +71,11 @@
 				      <td><?php echo('Proveedor '.random_int(1, 99)) ?></td>
 				      <td><?php $temp = array_rand($marcas); echo($marcas[$temp]) ?></td>
 				      <td><?php echo(random_int(100, 699).' grs') ?></td>
-				      <td><a href="#">Ver mas </a></td>
+				      <td><a href="<?=base_url('/controlador/detalleinsumo')?>">Ver mas </a></td>
 				      <td><?php echo(random_int(20, 45).' u') ?></td>
 				      <td>
 				      	
-						<button type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
+						<a href="<?=base_url('/controlador/detalleinsumo')?>" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
 						<button type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-trash"></i></button>
 						<button type="button" class="btn btn-outline-dark btn-sm">Merma</button>
 						<button type="button" class="btn btn-outline-dark btn-sm">Historial Merma</button>
