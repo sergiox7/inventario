@@ -22,9 +22,9 @@
 					<div class="col-12">
 					    <div class="form-group">
 					      <label for="exampleInputEmail1" class="form-label mt-4">Nombre</label>
-					      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-					      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-					    </div>
+					      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre del producto">
+							<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->					    
+						</div>
 
 					    <div class="form-group">
 					      <label for="exampleSelect2" class="form-label mt-4">Unidad de medida</label>
@@ -38,6 +38,24 @@
 					        <option value="oz">Onza (oz.)</option>
 					      </select>
 					    </div>
+
+					    <div class="form-group">
+					      <label for="exampleSelect2" class="form-label mt-4">Proveedor</label>
+					      <select class="form-select" id="exampleSelect2">
+					        <option value="1">Proveedor 1</option>
+					        <option value="2">Proveedor 2</option>
+					        <option value="3">Proveedor 3</option>
+					        <option value="4">Proveedor 4</option>
+					        <option value="5">Proveedor 5</option>
+					      </select>
+					    </div>
+
+					    <div class="form-group">
+					      <label for="exampleInputEmail1" class="form-label mt-4">Precio de venta</label>
+					      <input type="number" min="0.1" step="0.1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre del producto">
+							<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->					    
+						</div>
+
 					</div>
 					<div class="row m-4"></div>
 
