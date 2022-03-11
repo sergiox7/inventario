@@ -67,6 +67,18 @@ CREATE TABLE comprasProducto(
 );
 
 
+-- Inventario
+
+CREATE TABLE inventario(
+	idInsumo int,
+	idPuntoVenta int,
+	cantidad int,
+	fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	FOREIGN KEY (idPuntoVenta) REFERENCES puntoVenta(idPuntoVenta),
+	FOREIGN KEY (idInsumo) REFERENCES insumo(idInsumo)
+);
+
+
 -- Insumos
 
 CREATE TABLE insumo(
