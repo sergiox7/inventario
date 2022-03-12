@@ -83,6 +83,7 @@
 		<a href="http://localhost/inventario/controlador/productos">productos</a>
 		<a href="http://localhost/inventario/controlador/reportes">Reportes</a>
 	</div> -->
-	
+ 
+
 
 </div>
