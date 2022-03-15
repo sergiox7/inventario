@@ -11,7 +11,7 @@
 		<div class="row m-2">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item active" aria-current="page"><i class="fa-solid fa-angle-left"></i> Volver atras</li>
+					<li class="breadcrumb-item active" aria-current="page" onclick="window.history.back();"><i class="fa-solid fa-angle-left"></i> Volver atras</li>
 				</ol>
 			</nav>
 		</div>
@@ -30,8 +30,8 @@
 					<!-- <button class="form-control btn btn-primary btn-sm" type="button">CREAR PRODUCTO <i class="fa-solid fa-plus"></i></button> -->
 				</div>
 				<div class="col">
-					<button class="form-control btn btn-primary btn-sm" type="button">HISTORIAL <i class="fa-solid fa-chart-simple"></i></button>
-				</div>
+<!-- 					<button class="form-control btn btn-primary btn-sm" type="button">HISTORIAL <i class="fa-solid fa-chart-simple"></i></button>
+ -->				</div>
 				<div class="col">
 					<a href="<?=base_url('/controlador/detalleproducto')?>" class="form-control btn btn-primary btn-sm" type="button">AGREGAR <i class="fa-solid fa-chart-simple"></i></a>
 					<div class="row mt-2"></div>
@@ -42,53 +42,8 @@
 
 
 		<div class="row m-2">
-			<div class="table-responsive">			
- 		<!-- table -->
-				<table class="table table-hover table-sm table-bordered">
-				  <thead class="table-dark">
-				    <tr>
-				      <th scope="col">#</th>
-				      <th scope="col">NOMBRE</th>
-				      <th scope="col">UNIDAD DE MEDIDA</th>
-				      <th scope="col">PROVEEDOR</th>
-				      <th scope="col">ESTADO</th>
-				      <th scope="col">DETALLES</th>
-				      <th scope="col">ACCIONES</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				  	<?php 
-
-				  	$datos = array('Coca-cola','Sabritas','Pastelito Marinela Chocoroles 4 pzas.', 'Pastelito Marinela Chocoroles 4 pzas.', 'Pastelito Marinela Gansito 50 g.', 'Chocolate Carlos V');
- 				  	$marcas = array('Coca-Cola Company','PepsiCo','Grupo Bimbo');
-
-				  	for ($i=0; $i <6 ; $i++) { ?>
-
-				    <tr>
-				      <th scope="row"><?php echo($i+1) ?></th>
-				      <td><?php echo($datos[$i]) ?></td>
-				      <td>Unidades</td>
-				      <td><?php $temp = array_rand($marcas); echo($marcas[$temp]) ?></td>
-				      <td>Activo</td>
-				      <td><a href="<?=base_url('/controlador/detalleproducto')?>">Ver mas </a></td>
-				      <td>
-				      	
-						<a href="<?=base_url('/controlador/detalleproducto')?>" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
-						<button type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-trash"></i></button>
-						<button type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-dollar-sign"></i></button>
-						<button type="button" class="btn btn-outline-dark btn-sm">Merma</button>
-						<button type="button" class="btn btn-outline-dark btn-sm">Historial Merma</button>
-
-				      </td>
-				    </tr> 
-				  	<?php
-				  	}
-
-				  	?>
-
-				  </tbody>
-				</table>
- 		<!-- ./table -->
+			<div class="table-responsive">
+				<div id="tabla-datos"></div>			
  			</div>
 		</div>
 

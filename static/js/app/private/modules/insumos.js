@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
 
 	$(document).ready(function () {
 		console.log('ready!');
-		$('#tabla-datos').load(base_url() + 'producto/tabla');
+		$('#tabla-datos').load(base_url() + 'insumo/tabla');
 		load_tbl;
 	});
 
@@ -13,9 +13,9 @@ jQuery(document).ready(function ($) {
 		if (window.confirm('Esta seguro de eliminar este registro?')) {
 			console.log( $(this).attr('data-info'))
 			$.ajax({
-				url: base_url() + 'producto/delete',
+				url: base_url() + 'insumo/delete',
 				type: 'post',
-				data: { idProducto: $(this).attr('data-info') },
+				data: { idInsumo: $(this).attr('data-info') },
 				cache: false,
 				dataType: 'json',
 				success: function (json) {
@@ -23,7 +23,7 @@ jQuery(document).ready(function ($) {
 
 					if (json.resultado == 'true') {
 						alert(json.mensaje);
-						$('#tabla-datos').load(base_url() + 'producto/tabla');
+						$('#tabla-datos').load(base_url() + 'insumo/tabla');
 					} else {
 						alert('Ocurrió un error, por favor vuelva a intentarlo');
 					}
@@ -87,7 +87,7 @@ function clear_form() {
 }
 
 function load_tbl() {
-	$('tabla-datos').load(base_url() + 'producto/tabla');
+	$('tabla-datos').load(base_url() + 'insumo/tabla');
 }
 
 function unblock_btn_submit() {}

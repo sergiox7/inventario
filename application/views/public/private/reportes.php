@@ -11,7 +11,7 @@
 		<div class="row m-2">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item active" aria-current="page"><i class="fa-solid fa-angle-left"></i> Volver atrás</li>
+					<li class="breadcrumb-item active" aria-current="page" onclick="window.history.back();"><i class="fa-solid fa-angle-left"></i> Volver atrás</li>
 				</ol>
 			</nav>
 		</div>

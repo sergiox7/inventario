@@ -11,7 +11,7 @@
 		<div class="row m-2">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item active" aria-current="page"><i class="fa-solid fa-angle-left"></i> Volver atras</li>
+					<li class="breadcrumb-item active" aria-current="page" onclick="window.history.back();"><i class="fa-solid fa-angle-left"></i> Volver atras</li>
 				</ol>
 			</nav>
 		</div>
@@ -42,42 +42,8 @@
 
 
 		<div class="row m-2">
-			<div class="table-responsive">			
- 		<!-- table -->
-				<table class="table table-hover table-sm table-bordered">
-				  <thead class="table-dark">
-				    <tr>
-				      <th scope="col">#</th>
-				      <th scope="col">NOMBRE</th>
-				      <th scope="col">DETALLES</th>
-				      <th scope="col">ACCIONES</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				  	<?php 
-
- 				  	$marcas = array('Coca-Cola Company','PepsiCo','Grupo Bimbo','Sigma alimentos','Sukarne','Alpura');
-
-				  	for ($i=0; $i <6 ; $i++) { ?>
-
-				    <tr>
-				      <th scope="row"><?php echo($i+1) ?></th>
-				      <td><?php echo($marcas[$i]) ?></td>
-				      <td><a href="<?=base_url('/controlador/detalleproveedor')?>">Ver mas </a></td>
-				      <td>
-				      	
-						<a href="<?=base_url('/controlador/detalleproveedor')?>" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
-						<button type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-trash"></i></button>
-				      </td>
-				    </tr> 
-				  	<?php
-				  	}
-
-				  	?>
-
-				  </tbody>
-				</table>
- 		<!-- ./table -->
+			<div class="table-responsive">
+				<div id="tabla-datos"></div>
  			</div>
 		</div>
 

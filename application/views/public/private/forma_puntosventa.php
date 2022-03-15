@@ -3,7 +3,7 @@
 
 	<div class="page-header" id="banner">
 
-		<h1>Detalle proveedor</h1>
+		<h1>Detalle punto de venta</h1>
 	</div>
 	
 
@@ -11,7 +11,7 @@
 		<div class="row m-2">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item active" aria-current="page" onclick="window.history.back();"><i class="fa-solid fa-angle-left"></i> Volver atras</li>
+					<li class="breadcrumb-item active" aria-current="page" onclick="window.history.back();"><i class="fa-solid fa-angle-left" ></i> Volver atras</li>
 				</ol>
 			</nav>
 		</div>
@@ -24,16 +24,16 @@
 						<?php if(isset($editable) && $editable != false){ ?>
 					    <div class="form-group">
 					      <label for="id_registro" class="form-label mt-4">ID</label>
-					      <input type="text" class="form-control" id="id_registro" aria-describedby="emailHelp" placeholder="ID del proveedor" value="<?php if(isset($id)) echo($id); ?>">
+					      <input type="text" class="form-control" id="id_registro" aria-describedby="emailHelp" placeholder="ID del punto de venta" value="<?php if(isset($id)) echo($id); ?>">
 						</div>
 						<?php }else{ ?>
 
-						<input type="hidden" class="form-control" id="id_registro" aria-describedby="emailHelp" placeholder="ID del proveedor" value="" readonly>
+						<input type="hidden" class="form-control" id="id_registro" aria-describedby="emailHelp" placeholder="ID del punto de venta" value="" readonly>
 						<?php } ?>
 
 					    <div class="form-group">
 					      <label for="exampleInputEmail1" class="form-label mt-4">Nombre</label>
-					      <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Nombre proveedor">
+					      <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Nombre del punto de venta">
 					    </div>
 
 					</div>

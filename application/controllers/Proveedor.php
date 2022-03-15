@@ -35,16 +35,16 @@ class Proveedor extends CI_Controller{
 			$respuesta['respuesta'] = null;
             
             
-            $this->form_validation->set_data($_GET)->set_rules('id', 'id', 'trim|integer|max_length[11]|greater_than_equal_to[1]|required'); 
+            $this->form_validation->set_data($_POST)->set_rules('id', 'id', 'trim|integer|max_length[11]|greater_than_equal_to[1]|required'); 
 		
             if ($this->form_validation->run()/* &&  $this->input->is_ajax_request()*/) {
-  				$id_registro        = $this->input->get('id'); 
+  				$id_registro        = $this->input->post('id'); 
                 $res = $this->Proveedor_model->getById($id_registro); 
 
 				if($res != NULL){
 
 				$respuesta['resultado'] = 'true';
-				$respuesta['mensaje'] = 'Registros obtenidos con éxito';
+				$respuesta['mensaje'] 	= 'Registros obtenidos con éxito';
 				$respuesta['respuesta'] = $res;
 
 				}
@@ -74,7 +74,6 @@ class Proveedor extends CI_Controller{
 			$this->form_validation->set_rules('nombre', 'nombre del proveedor', 'required|htmlspecialchars|max_length[50]|trim');
 
 			if($this->form_validation->run()/* &&  $this->input->is_ajax_request()*/){
-				$idProveedor 	= $this->input->post("idProveedor");
 				$nombre 		= $this->input->post("nombre");
 
 				$data = array(
@@ -191,6 +190,18 @@ class Proveedor extends CI_Controller{
 
 		//}
 	}
+
+
+	public function tabla(){
+		//if($this->session->userdata('login') == true){
+            
+        $data['res'] = $this->Proveedor_model->getAll(); 
+
+        $html = $this->load->view('public/private/tabla_proveedores', $data, true);
+        echo $html; 				
+            
+		//}
+	}	
 
 }
 

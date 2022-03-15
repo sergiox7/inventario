@@ -33,13 +33,15 @@ class Producto extends CI_Controller{
 			$respuesta['resultado'] = 'false';
 			$respuesta['mensaje'] = 'Ocurrio un error durante la petición';
 			$respuesta['respuesta'] = null;
-            
-            
-            $this->form_validation->set_data($_GET)->set_rules('id', 'id', 'trim|integer|max_length[11]|greater_than_equal_to[1]|required'); 
+           
+        		$post_id       = $this->input->post('id'); 
+
+			$datos_post = array();
+			
+            $this->form_validation->set_data($datos_post)->set_rules('id', 'id', 'trim|integer|max_length[11]|greater_than_equal_to[1]|required'); 
 		
             if ($this->form_validation->run()/* &&  $this->input->is_ajax_request()*/) {
-  				$id_registro        = $this->input->get('id'); 
-                $res = $this->Producto_model->getById($id_registro); 
+                 $res = $this->Producto_model->getById($post_id); 
 
 				if($res != NULL){
 
@@ -50,6 +52,7 @@ class Producto extends CI_Controller{
 				}
 
              }
+
 
             /*Si la validación de campos es incorrecta*/
             else {
@@ -208,6 +211,18 @@ class Producto extends CI_Controller{
 
 		//}
 	}
+
+	public function tabla(){
+		//if($this->session->userdata('login') == true){
+            
+        $data['res'] = $this->Producto_model->getAll(); 
+
+        $html = $this->load->view('public/private/tabla_productos', $data, true);
+        echo $html; 				
+            
+		//}
+	}
+
 
 }
 

@@ -28,9 +28,47 @@ class Insumo extends CI_Controller{
 		//}
 	}
 
+	public function get(){
+		//if($this->session->userdata('login') == true){
+			$respuesta = array();
+			$respuesta['resultado'] = 'false';
+			$respuesta['mensaje'] = 'Ocurrio un error durante la petición';
+			$respuesta['respuesta'] = null;
+           
+        		$post_id       = $this->input->post('id'); 
+
+			$datos_post = array();
+			
+            $this->form_validation->set_data($datos_post)->set_rules('id', 'id', 'trim|integer|max_length[11]|greater_than_equal_to[1]|required'); 
+		
+            if ($this->form_validation->run()/* &&  $this->input->is_ajax_request()*/) {
+                 $res = $this->Insumo_model->getById($post_id); 
+
+				if($res != NULL){
+
+				$respuesta['resultado'] = 'true';
+				$respuesta['mensaje'] = 'Registros obtenidos con éxito';
+				$respuesta['respuesta'] = $res;
+
+				}
+
+             }
+
+
+            /*Si la validación de campos es incorrecta*/
+            else {
+            	$this->form_validation->set_error_delimiters('','');
+				$respuesta['error'] = validation_errors();
+            }
+			
+            echo json_encode($respuesta);
+
+		//}
+	}	
+
 	public function insert(){
 		//if($this->session->userdata('login') == true){
-			$this->form_validation->set_rules('unidadMedida', 'unidadMedida', 'required|htmlspecialchars|trim');
+			$this->form_validation->set_rules('unidadMedida', 'unidadMedida', 'required|htmlspecialchars|max_length[5]|trim');
 			$this->form_validation->set_rules('idProveedor', 'idProveedor', 'required|htmlspecialchars|trim');
 			$this->form_validation->set_rules('nombre', 'nombre', 'required|htmlspecialchars|trim');
 			if($this->form_validation->run()){
@@ -78,7 +116,7 @@ class Insumo extends CI_Controller{
 			$respuesta['respuesta'] = null;
 
 			$this->form_validation->set_rules('idInsumo', 'idInsumo', 'trim|integer|max_length[11]|greater_than_equal_to[1]|required');
-			$this->form_validation->set_rules('unidadMedida', 'unidadMedida', 'trim|integer|max_length[11]|greater_than_equal_to[1]|required');
+			$this->form_validation->set_rules('unidadMedida', 'unidadMedida', 'required|htmlspecialchars|max_length[5]|trim');
 			$this->form_validation->set_rules('idProveedor', 'idProveedor', 'required|htmlspecialchars|max_length[50]|trim');
 			$this->form_validation->set_rules('nombre', 'nombre del proveedor', 'required|htmlspecialchars|max_length[50]|trim');
 
@@ -111,7 +149,7 @@ class Insumo extends CI_Controller{
 
 			}
 
-            /Si la validación de campos es incorrecta/
+            //Si la validación de campos es incorrecta//
             else {
             	$this->form_validation->set_error_delimiters('','');
 				$respuesta['error'] = validation_errors();
@@ -153,7 +191,7 @@ class Insumo extends CI_Controller{
 
 			}
 
-            /Si la validación de campos es incorrecta/
+            //Si la validación de campos es incorrecta//
             else {
             	$this->form_validation->set_error_delimiters('','');
 				$respuesta['error'] = validation_errors();
@@ -163,5 +201,18 @@ class Insumo extends CI_Controller{
 
 		//}
 	}
+
+	public function tabla(){
+		//if($this->session->userdata('login') == true){
+            
+        $data['res'] = $this->Insumo_model->getAll(); 
+
+        $html = $this->load->view('public/private/tabla_insumos', $data, true);
+        echo $html; 				
+            
+		//}
+	}
+
+
 }
 ?>

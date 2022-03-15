@@ -4,8 +4,10 @@ defined('BASEPATH') OR exit('No se permite el acceso directo.');
 class Insumo_model extends CI_Model{
 
     public function getAll(){
-        $this->db->join('insumo', 'proveedor.idProveedor = insumo.idProveedor');
-        $rs = $this->db->get('insumo');
+        $this->db->select('idInsumo, unidadMedida, insumo.nombre as nombreinsumo, insumo.idProveedor, proveedor.nombre as nombreproveedor from insumo left join proveedor on proveedor.idProveedor = insumo.idProveedor', FALSE);
+
+        $rs = $this->db->get();
+
         return $rs->num_rows() > 0 ? $rs->result() : NULL;
     }
 
@@ -26,7 +28,7 @@ class Insumo_model extends CI_Model{
         try {
             $this->db->set($entry);
             $this->db->where('idInsumo', $idInsumo);
-            $this->db->update('v');
+            $this->db->update('insumo');
 
             return ($idInsumo) ? TRUE : NULL;
         }

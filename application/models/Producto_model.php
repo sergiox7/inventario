@@ -4,8 +4,10 @@ defined('BASEPATH') OR exit('No se permite el acceso directo.');
 class Producto_model extends CI_Model{
 
 	public function getAll(){
-		$this->db->join('proveedor', 'proveedor.idProveedor = producto.idProveedor');
-		$rs = $this->db->get('producto');
+		$this->db->select('idProducto, unidadMedida, producto.nombre as nombreproducto, precioVenta, producto.idProveedor, proveedor.nombre as nombreproveedor from producto left join proveedor on proveedor.idProveedor = producto.idProveedor', FALSE);
+
+		$rs = $this->db->get();
+
 		return $rs->num_rows() > 0 ? $rs->result() : NULL;
 	}
 

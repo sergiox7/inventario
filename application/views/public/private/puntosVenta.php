@@ -11,7 +11,7 @@
 		<div class="row m-2">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item active" aria-current="page"><i class="fa-solid fa-angle-left"></i> Volver atras</li>
+					<li class="breadcrumb-item active" aria-current="page" onclick="window.history.back();"><i class="fa-solid fa-angle-left"></i> Volver atras</li>
 				</ol>
 			</nav>
 		</div>
@@ -33,7 +33,7 @@
 					
 				</div>
 				<div class="col">
-					<button class="form-control btn btn-primary btn-sm" type="button">AGREGAR <i class="fa-solid fa-chart-simple"></i></button>
+					<a href="<?=base_url('/controlador/detalleptventa')?>" class="form-control btn btn-primary btn-sm" type="button">AGREGAR <i class="fa-solid fa-chart-simple"></i></a>
 					<div class="row mt-2"></div>
 					<!-- <button class="form-control btn btn-outline-primary btn-sm" type="button">EXPORTAR A EXCEL <i class="fa-solid fa-file-export"></i></button> -->
 				</div>
@@ -42,41 +42,7 @@
 
 
 		<div class="row m-2">
-			<div class="d-flex align-content-center flex-wrap">			
- 		<!-- table -->
-				 
-				  	<?php 
-
-				  	$datos = array('TAQ Norte','TAQ Sur','TAQ Este');
-
-
-				  	for ($i=0; $i <3 ; $i++) { ?>
-
-						<div class="card col-md-6 col-sm-12 p-2">
-							<div class="card-header text-white bg-secondary">INVENTARIO PUNTO DE VENTA <?php echo($i+1) ?></div>
-						  <div class="card-body">
-						    
-						    <div class="d-flex flex-row justify-content-between">
-						    	<div>
-						    		<h5 class="card-title"><?php echo($datos[$i]) ?></h5>
-						    	</div>
-						    	<div class="d-flex flex-column col-6">
-						    		<div class="d-flex justify-content-end">
-									    <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa-solid fa-pen-to-square"></i></button>
-										<button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa-solid fa-trash"></i></button>
-						    		</div>
-						    		<a href="#" class="btn btn-outline-primary m-1">Opciones</a>
-						    	</div>
-						    </div>
-						    
-						  </div>
-						</div>
-
-				  	<?php
-				  	}
-
-				  	?> 
- 		<!-- ./table -->
+			<div class="d-flex align-content-center flex-wrap" id="tabla-datos">			
  			</div>
 		</div>
 
