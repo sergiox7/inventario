@@ -3,7 +3,7 @@
 
 	<div class="page-header" id="banner">
 
-		<h1>Gestión recetas</h1>
+		<h1>Gestión recetas XD</h1>
 	</div>
 	
 
@@ -100,6 +100,6 @@
 		<a href="http://localhost/inventario/controlador/productos">productos</a>
 		<a href="http://localhost/inventario/controlador/reportes">Reportes</a>
 	</div> -->
-	
+
 
 </div>
