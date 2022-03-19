@@ -6,7 +6,7 @@ function ejecutarAjax(){
 	"type"    : "post",
 	"dataType"     : "json",
 	"success"      : function( json ) {
-		console.log("Era el puto ajax mal hecho");
+		console.log(json.respuesta);
 	},
 	error: function (ts) {
 		console.log(ts.responseText);
