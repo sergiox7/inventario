@@ -51,7 +51,6 @@
 				      <th scope="col">RECETA</th>
 				      <th scope="col">INGREDIENTES</th>
 				      <th scope="col">PRESENTACION</th>
-				      <th scope="col">DETALLES</th>
 				      <th scope="col">STOCK</th>
 				      <th scope="col">ACCIONES</th>
 				    </tr>
@@ -69,7 +68,6 @@
 				      <td><?php echo($datos[$i]) ?></td>
 				      <td><?php echo(random_int(6, 18)) ?></td>
 				      <td><?php echo(random_int(100, 699).' grs') ?></td>
-				      <td><a href="<?=base_url('/controlador/detallereceta')?>">Ver mas </a></td>
 				      <td><?php echo(random_int(20, 45).' u') ?></td>
 				      <td>
 				      	
